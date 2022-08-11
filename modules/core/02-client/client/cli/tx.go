@@ -13,7 +13,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/version"
 	govcli "github.com/cosmos/cosmos-sdk/x/gov/client/cli"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
-	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
+	upgradetypes "github.com/sei-protocol/sei-chain/x/upgrade/types"
 	"github.com/spf13/cobra"
 
 	"github.com/cosmos/ibc-go/v3/modules/core/02-client/types"

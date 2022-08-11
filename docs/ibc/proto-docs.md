@@ -89,6 +89,14 @@
   
     - [Query](#ibc.applications.interchain_accounts.controller.v1.Query)
   
+- [ibc/applications/interchain_accounts/controller/v1/tx.proto](#ibc/applications/interchain_accounts/controller/v1/tx.proto)
+    - [MsgRegisterAccount](#ibc.applications.interchain_accounts.controller.v1.MsgRegisterAccount)
+    - [MsgRegisterAccountResponse](#ibc.applications.interchain_accounts.controller.v1.MsgRegisterAccountResponse)
+    - [MsgSubmitTx](#ibc.applications.interchain_accounts.controller.v1.MsgSubmitTx)
+    - [MsgSubmitTxResponse](#ibc.applications.interchain_accounts.controller.v1.MsgSubmitTxResponse)
+  
+    - [Msg](#ibc.applications.interchain_accounts.controller.v1.Msg)
+  
 - [ibc/applications/interchain_accounts/host/v1/host.proto](#ibc/applications/interchain_accounts/host/v1/host.proto)
     - [Params](#ibc.applications.interchain_accounts.host.v1.Params)
   
@@ -1506,6 +1514,88 @@ Query provides defines the gRPC querier service.
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
 | `Params` | [QueryParamsRequest](#ibc.applications.interchain_accounts.controller.v1.QueryParamsRequest) | [QueryParamsResponse](#ibc.applications.interchain_accounts.controller.v1.QueryParamsResponse) | Params queries all parameters of the ICA controller submodule. | GET|/ibc/apps/interchain_accounts/controller/v1/params|
+
+ <!-- end services -->
+
+
+
+<a name="ibc/applications/interchain_accounts/controller/v1/tx.proto"></a>
+<p align="right"><a href="#top">Top</a></p>
+
+## ibc/applications/interchain_accounts/controller/v1/tx.proto
+
+
+
+<a name="ibc.applications.interchain_accounts.controller.v1.MsgRegisterAccount"></a>
+
+### MsgRegisterAccount
+MsgRegisterAccount defines the payload for Msg/RegisterAccount
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| `owner` | [string](#string) |  |  |
+| `connection_id` | [string](#string) |  |  |
+| `version` | [string](#string) |  |  |
+
+
+
+
+
+
+<a name="ibc.applications.interchain_accounts.controller.v1.MsgRegisterAccountResponse"></a>
+
+### MsgRegisterAccountResponse
+MsgRegisterAccountResponse defines the response for Msg/RegisterAccount
+
+
+
+
+
+
+<a name="ibc.applications.interchain_accounts.controller.v1.MsgSubmitTx"></a>
+
+### MsgSubmitTx
+MsgSubmitTx defines the payload for Msg/SubmitTx
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| `owner` | [string](#string) |  |  |
+| `connection_id` | [string](#string) |  |  |
+| `timeout` | [string](#string) |  |  |
+| `msg` | [google.protobuf.Any](#google.protobuf.Any) |  |  |
+
+
+
+
+
+
+<a name="ibc.applications.interchain_accounts.controller.v1.MsgSubmitTxResponse"></a>
+
+### MsgSubmitTxResponse
+MsgSubmitTxResponse defines the response for Msg/SubmitTx
+
+
+
+
+
+ <!-- end messages -->
+
+ <!-- end enums -->
+
+ <!-- end HasExtensions -->
+
+
+<a name="ibc.applications.interchain_accounts.controller.v1.Msg"></a>
+
+### Msg
+Msg defines the controller Msg service.
+
+| Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
+| ----------- | ------------ | ------------- | ------------| ------- | -------- |
+| `RegisterAccount` | [MsgRegisterAccount](#ibc.applications.interchain_accounts.controller.v1.MsgRegisterAccount) | [MsgRegisterAccountResponse](#ibc.applications.interchain_accounts.controller.v1.MsgRegisterAccountResponse) | RegisterAccount defines a rpc handler for MsgRegisterAccount | |
+| `SubmitTx` | [MsgSubmitTx](#ibc.applications.interchain_accounts.controller.v1.MsgSubmitTx) | [MsgSubmitTxResponse](#ibc.applications.interchain_accounts.controller.v1.MsgSubmitTxResponse) | SubmitTx defines a rpc handler for MsgSubmitTx | |
 
  <!-- end services -->
 
